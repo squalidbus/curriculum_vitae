@@ -1,9 +1,12 @@
 import json
+from pathlib import Path
 
-filename = input("The filename is: ")
 
+filename_input = input("The input filename is: ")
+filename_output = input("The output filename is: ")
 
-with open(filename, 'r') as f:
-    json_loaded = json.load(f)
+with open(filename_input, 'r') as json_file:
+    cv_data = json.load(json_file)
 
-print(json_loaded)
+    with open(filename_output, 'w') as output_file:
+        output_file.write("Hello world")
