@@ -9,4 +9,15 @@ with open(filename_input, 'r') as json_file:
     cv_data = json.load(json_file)
 
     with open(filename_output, 'w') as output_file:
-        output_file.write("Hello world")
+
+        # Name/Title
+        output_file.write(cv_data['name'])
+
+        # Locaton
+        output_file.write(f"\n{cv_data['location']}")
+
+        # Phone
+        output_file.write(f"\n{cv_data['phone']}")
+
+        # Email
+        output_file.write(f"\n{cv_data['email']}")
